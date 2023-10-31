@@ -176,3 +176,4 @@ let totalSalary = 0;
     }   
     console.log(totalSalary);
 ```
+![деньги деньги деньги!](5.png)
