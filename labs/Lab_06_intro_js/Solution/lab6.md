@@ -113,3 +113,66 @@ function getRandomNumber() {
     console.log(randomWord);
 ```
 ![ту-ту-туру](4.png)
+
+### Работа с объектами
+
+1. Создать простой пустой объект
+
+```html
+    const person = {};
+```
+
+2. Добавить поля: `firstName`, `surname`, `patronymic`, `birthday`, `hobby` и `group`
+
+```html
+person.firstName = 'Иван';
+    person.surname = 'Иванов';
+    person.patronymic = 'Иванович';
+    person.birthday = '01.01.1990';
+    person.hobby = 'Футбол';
+```
+
+3. Добавить метод, который будет возвращать ФИО, год рождения, хобби и возраст
+
+```html
+person.getInfo = function() {
+    const today = new Date();
+    const birthDate = new Date(this.birthday);
+    const age = today.getFullYear() - birthDate.getFullYear();
+    const fullName = `${this.surname} ${this.firstName} ${this.patronymic}`;
+    return `ФИО: ${fullName}\nГод рождения: ${this.birthday}\nХобби: ${this.hobby}\nВозраст: ${age}`;
+    };
+```
+
+4. Вызвать этот метод и вывести результат через `alert`
+
+```html
+alert(person.getInfo());
+```
+
+5. Создать объект, где будут храниться зарплаты 10 сотрудников по правилу: ключ - фамилия, а значение - зарплата
+
+```html
+const salaries = {
+     Раб1: 60000,
+     Раб2: 50000,
+     Раб3: 45000,
+     Раб4: 40000,
+     Раб5: 35000,
+     Раб6: 30000,
+     Раб7: 25000,
+     Раб8: 20000,
+     Раб9: 15000,
+     Раб10: 10000,     
+    };
+```
+
+6. После этого необходимо посчитать общую зарплату сотрудников
+
+```html
+let totalSalary = 0;
+    for (let key in salaries) {
+     totalSalary += salaries[key];
+    }   
+    console.log(totalSalary);
+```
