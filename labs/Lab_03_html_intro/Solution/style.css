@@ -1,0 +1,10 @@
+button {
+    background-color: rgb(255, 0, 0);/* цвет заливки кнопки */
+    border: 1px solid #7300ff;/* цвет обводки кнопки */
+    color: rgb(0, 0, 0); /* цвет текста кнопки */
+    padding: 25px 50px;
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
