@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color:yellow;
+    background-color: yellow;
 }
 
 .container {
@@ -15,18 +15,16 @@ body {
 h4 {
     margin-top: 20px;
     font-size: 36px;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: 30px;
 }
 
 /* Шапка */
 .header {
-    background-color:rgb(213, 192, 0);
+    background-color: rgb(213, 192, 0);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +38,6 @@ h4 {
     margin-bottom: 0;
     margin-left: 10px;
     margin-right: 10px;
-    
 }
 
 .nav {
@@ -49,7 +46,7 @@ h4 {
 }
 
 .nav a {
-    color:black;
+    color: black;
     text-decoration: none;
     margin-right: 20px;
     font-size: 18px;
@@ -57,22 +54,17 @@ h4 {
 
 /* Секция с каталогом товаров */
 .catalog {
-    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .catalog .item {
-    width: calc(25% - 20px);
     padding: 20px;
-    background-color:rgb(213, 192, 0);
+    background-color: rgb(213, 192, 0);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
     margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 .catalog .item img {
@@ -93,19 +85,15 @@ h4 {
 .promo-catalog {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .promo-catalog .item {
-    width: calc(20% - 20px);
     padding: 20px;
-    background-color:rgb(213, 192, 0);
+    background-color: rgb(213, 192, 0);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .promo-catalog .item img {
@@ -120,4 +108,38 @@ h4 {
 .promo-catalog .item p {
     margin-top: 10px;
     font-size: 16px;
+}
+
+/* Медиазапросы */
+@media (max-width: 2000px) {
+    .catalog .item {
+        width: calc(25% - 20px);
+    }
+    .promo-catalog .item {
+        width: calc(20% - 20px);
+    }
+}
+
+@media (max-width: 960px) {
+    .catalog .item {
+        width: calc(33.33% - 20px);
+    }
+    .promo-catalog .item {
+        width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog .item {
+        width: calc(50% - 20px);
+    }
+    .promo-catalog .item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog .item {
+        width: calc(100% - 20px);
+    }
 }
