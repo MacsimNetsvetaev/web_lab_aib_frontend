@@ -131,7 +131,7 @@ h4 {
 
 @media (max-width: 768px) {
     .catalog .item {
-        width: calc(50% - 20px);
+        width: calc(40% - 20px);
     }
     .promo-catalog .item {
         width: calc(33.33% - 20px);
@@ -140,6 +140,10 @@ h4 {
 
 @media (max-width: 600px) {
     .catalog .item {
-        width: calc(100% - 20px);
+        width: calc(90% - 20px);
+    }
+    
+    .promo-catalog .item {
+        width: calc(40% - 20px);
     }
 }
