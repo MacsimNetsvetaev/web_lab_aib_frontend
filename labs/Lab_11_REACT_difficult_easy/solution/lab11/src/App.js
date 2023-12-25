@@ -7,7 +7,7 @@ function App() {
 
   const [todoData, setData] = useState([
     {
-        date: new Date(2023, 11, 27), 
+        date: new Date(2023, 11, 26), 
         tasks: ['Зачет по моему любимому предмету'], 
         desc: ['💖💖💖'], 
         time: ['9:00'],
