@@ -1,16 +1,13 @@
 import heapq
-
-def find(n, arr):
-    max, min, result = [], [], 0
-    for i in range(n):
-        heapq.heappush(max, -arr[i])  
-        heapq.heappush(min, -heapq.heappop(max))
+def find(length, array):
+    maximum, minimum, result = [], [], 0
+    for i in range(length):
+        heapq.heappush(maximum, -array[i])  
+        heapq.heappush(minimum, -heapq.heappop(maximum))
         
-        if len(min) > len(max):
-            heapq.heappush(max, -heapq.heappop(min))  
-        result -= max[0]  
-
+        if len(minimum) > len(maximum):
+            heapq.heappush(maximum, -heapq.heappop(minimum))  
+        result -= maximum[0]  
     return result
-
-n, arr =int(input()), list(map(int, input().split()))
-print(find(n, arr))
+length, array =int(input()), list(map(int, input().split()))
+print(find(length, array))
